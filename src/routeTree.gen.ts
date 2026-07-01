@@ -9,8 +9,44 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ReferenciasRouteImport } from './routes/referencias'
+import { Route as ConstructivistaRouteImport } from './routes/constructivista'
+import { Route as ConocenosRouteImport } from './routes/conocenos'
+import { Route as ConductistaRouteImport } from './routes/conductista'
+import { Route as CognoscitivistaRouteImport } from './routes/cognoscitivista'
+import { Route as AprendizajeProfundoRouteImport } from './routes/aprendizaje-profundo'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ReferenciasRoute = ReferenciasRouteImport.update({
+  id: '/referencias',
+  path: '/referencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConstructivistaRoute = ConstructivistaRouteImport.update({
+  id: '/constructivista',
+  path: '/constructivista',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConocenosRoute = ConocenosRouteImport.update({
+  id: '/conocenos',
+  path: '/conocenos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConductistaRoute = ConductistaRouteImport.update({
+  id: '/conductista',
+  path: '/conductista',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CognoscitivistaRoute = CognoscitivistaRouteImport.update({
+  id: '/cognoscitivista',
+  path: '/cognoscitivista',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AprendizajeProfundoRoute = AprendizajeProfundoRouteImport.update({
+  id: '/aprendizaje-profundo',
+  path: '/aprendizaje-profundo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +55,116 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aprendizaje-profundo': typeof AprendizajeProfundoRoute
+  '/cognoscitivista': typeof CognoscitivistaRoute
+  '/conductista': typeof ConductistaRoute
+  '/conocenos': typeof ConocenosRoute
+  '/constructivista': typeof ConstructivistaRoute
+  '/referencias': typeof ReferenciasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aprendizaje-profundo': typeof AprendizajeProfundoRoute
+  '/cognoscitivista': typeof CognoscitivistaRoute
+  '/conductista': typeof ConductistaRoute
+  '/conocenos': typeof ConocenosRoute
+  '/constructivista': typeof ConstructivistaRoute
+  '/referencias': typeof ReferenciasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aprendizaje-profundo': typeof AprendizajeProfundoRoute
+  '/cognoscitivista': typeof CognoscitivistaRoute
+  '/conductista': typeof ConductistaRoute
+  '/conocenos': typeof ConocenosRoute
+  '/constructivista': typeof ConstructivistaRoute
+  '/referencias': typeof ReferenciasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aprendizaje-profundo'
+    | '/cognoscitivista'
+    | '/conductista'
+    | '/conocenos'
+    | '/constructivista'
+    | '/referencias'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aprendizaje-profundo'
+    | '/cognoscitivista'
+    | '/conductista'
+    | '/conocenos'
+    | '/constructivista'
+    | '/referencias'
+  id:
+    | '__root__'
+    | '/'
+    | '/aprendizaje-profundo'
+    | '/cognoscitivista'
+    | '/conductista'
+    | '/conocenos'
+    | '/constructivista'
+    | '/referencias'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AprendizajeProfundoRoute: typeof AprendizajeProfundoRoute
+  CognoscitivistaRoute: typeof CognoscitivistaRoute
+  ConductistaRoute: typeof ConductistaRoute
+  ConocenosRoute: typeof ConocenosRoute
+  ConstructivistaRoute: typeof ConstructivistaRoute
+  ReferenciasRoute: typeof ReferenciasRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/referencias': {
+      id: '/referencias'
+      path: '/referencias'
+      fullPath: '/referencias'
+      preLoaderRoute: typeof ReferenciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/constructivista': {
+      id: '/constructivista'
+      path: '/constructivista'
+      fullPath: '/constructivista'
+      preLoaderRoute: typeof ConstructivistaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conocenos': {
+      id: '/conocenos'
+      path: '/conocenos'
+      fullPath: '/conocenos'
+      preLoaderRoute: typeof ConocenosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conductista': {
+      id: '/conductista'
+      path: '/conductista'
+      fullPath: '/conductista'
+      preLoaderRoute: typeof ConductistaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cognoscitivista': {
+      id: '/cognoscitivista'
+      path: '/cognoscitivista'
+      fullPath: '/cognoscitivista'
+      preLoaderRoute: typeof CognoscitivistaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aprendizaje-profundo': {
+      id: '/aprendizaje-profundo'
+      path: '/aprendizaje-profundo'
+      fullPath: '/aprendizaje-profundo'
+      preLoaderRoute: typeof AprendizajeProfundoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +177,23 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AprendizajeProfundoRoute: AprendizajeProfundoRoute,
+  CognoscitivistaRoute: CognoscitivistaRoute,
+  ConductistaRoute: ConductistaRoute,
+  ConocenosRoute: ConocenosRoute,
+  ConstructivistaRoute: ConstructivistaRoute,
+  ReferenciasRoute: ReferenciasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
