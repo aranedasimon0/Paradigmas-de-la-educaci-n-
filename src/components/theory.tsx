@@ -137,12 +137,14 @@ export function ContextExamples({
 }
 
 export function TheoryNav({ current }: { current: Accent }) {
-  const others: { to: string; label: string; a: Accent }[] = [
-    { to: "/conductista", label: "Conductista", a: "conductista" },
-    { to: "/cognoscitivista", label: "Cognoscitivista", a: "cognoscitivista" },
-    { to: "/constructivista", label: "Constructivista", a: "constructivista" },
-    { to: "/aprendizaje-profundo", label: "Aprendizaje Profundo", a: "profundo" },
-  ].filter((o) => o.a !== current);
+  const others = (
+    [
+      { to: "/conductista", label: "Conductista", a: "conductista" },
+      { to: "/cognoscitivista", label: "Cognoscitivista", a: "cognoscitivista" },
+      { to: "/constructivista", label: "Constructivista", a: "constructivista" },
+      { to: "/aprendizaje-profundo", label: "Aprendizaje Profundo", a: "profundo" },
+    ] as const
+  ).filter((o) => o.a !== current);
 
   return (
     <section className="mx-auto max-w-5xl px-5 lg:px-8 pb-20">
