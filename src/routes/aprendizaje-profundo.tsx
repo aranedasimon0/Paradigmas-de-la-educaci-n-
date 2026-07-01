@@ -1,0 +1,90 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { SiteLayout } from "@/components/SiteLayout";
+import {
+  TheoryHero,
+  Section,
+  PrincipleList,
+  ContextExamples,
+  TheoryNav,
+} from "@/components/theory";
+
+export const Route = createFileRoute("/aprendizaje-profundo")({
+  head: () => ({
+    meta: [
+      { title: "Aprendizaje Profundo | Educar con Teorías" },
+      {
+        name: "description",
+        content:
+          "Qué es el aprendizaje profundo, sus dimensiones (Fullan) y cómo llevarlo a la práctica docente en contextos formales e informales.",
+      },
+      { property: "og:title", content: "Aprendizaje Profundo" },
+      {
+        property: "og:description",
+        content:
+          "Un enfoque contemporáneo que integra las teorías del aprendizaje para formar ciudadanía crítica y competencias del siglo XXI.",
+      },
+    ],
+  }),
+  component: Page,
+});
+
+function Page() {
+  return (
+    <SiteLayout>
+      <TheoryHero
+        accent="profundo"
+        eyebrow="Enfoque contemporáneo"
+        title="Aprendizaje Profundo"
+        lead="Más que memorizar contenidos: aprender de forma duradera, transferible y significativa para la vida y la ciudadanía."
+      />
+
+      <Section kicker="Idea central" title="¿Qué es el aprendizaje profundo?" accent="profundo">
+        <p>
+          El aprendizaje profundo (deep learning en la propuesta de Michael Fullan) integra las
+          teorías clásicas y las orienta a resultados de alto valor: pensamiento crítico,
+          creatividad, colaboración, ciudadanía, comunicación y carácter.
+        </p>
+        <p>
+          A diferencia del aprendizaje superficial —centrado en repetir información—, el
+          aprendizaje profundo busca que el estudiante comprenda, relacione, aplique y
+          transforme aquello que aprende, tanto dentro como fuera de la escuela.
+        </p>
+      </Section>
+
+      <Section kicker="Las 6 C" title="Dimensiones del aprendizaje profundo" accent="profundo">
+        <PrincipleList
+          items={[
+            { title: "Carácter", body: "Perseverancia, empatía y responsabilidad por el propio aprendizaje." },
+            { title: "Ciudadanía", body: "Compromiso con problemas locales y globales desde una perspectiva ética." },
+            { title: "Colaboración", body: "Trabajar con otros, gestionar equipos y aprender del diálogo." },
+            { title: "Comunicación", body: "Expresarse con claridad en múltiples formatos y audiencias." },
+            { title: "Creatividad", body: "Generar ideas nuevas y buscar soluciones originales a problemas reales." },
+            { title: "Pensamiento crítico", body: "Evaluar información, argumentar y tomar decisiones fundadas." },
+          ]}
+        />
+      </Section>
+
+      <Section kicker="Aplicación" title="Cómo se ve en la práctica" accent="profundo">
+        <p>
+          El aprendizaje profundo se activa cuando la enseñanza articula contenidos, procesos y
+          contextos con propósito. No es una técnica, sino una manera de diseñar experiencias.
+        </p>
+        <ContextExamples
+          accent="profundo"
+          formal={[
+            "Proyectos interdisciplinares que abordan problemas de la comunidad escolar.",
+            "Evaluaciones auténticas: portafolios, presentaciones y producciones reales.",
+            "Aulas donde el error se discute como oportunidad de aprendizaje.",
+          ]}
+          informal={[
+            "Voluntariados y participación en organizaciones sociales del entorno.",
+            "Creación de contenido propio en plataformas digitales con impacto real.",
+            "Espacios de mentoría entre pares o intergeneracionales.",
+          ]}
+        />
+      </Section>
+
+      <TheoryNav current="profundo" />
+    </SiteLayout>
+  );
+}
