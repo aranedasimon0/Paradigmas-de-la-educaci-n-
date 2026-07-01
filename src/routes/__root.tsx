@@ -9,6 +9,12 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
+import "@fontsource-variable/inter/index.css";
+import "@fontsource/fraunces/400.css";
+import "@fontsource/fraunces/500.css";
+import "@fontsource/fraunces/600.css";
+import "@fontsource/fraunces/700.css";
+
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -77,14 +83,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Educar con Teorías — Teorías del Aprendizaje | UC Temuco" },
+      {
+        name: "description",
+        content:
+          "Recurso pedagógico interactivo sobre las principales teorías del aprendizaje (conductista, cognoscitivista, constructivista y aprendizaje profundo) para docentes en formación de la Universidad Católica de Temuco.",
+      },
+      { name: "author", content: "Simón Araneda, Bruno Sandoval, Génesis Contreras, Joaquín Yañez" },
+      { property: "og:title", content: "Educar con Teorías — Teorías del Aprendizaje" },
+      {
+        property: "og:description",
+        content:
+          "Guía interactiva sobre las teorías del aprendizaje aplicadas a contextos formales e informales de la práctica docente.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
