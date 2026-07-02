@@ -142,6 +142,25 @@ function Page() {
         </ul>
       </Section>
 
+      <VideoEmbed
+        accent="constructivista"
+        videoId="fHdQWmbhfdE"
+        title="Vygotsky y el desarrollo a través de las relaciones sociales"
+        caption="Sprouts Español · Zona de desarrollo próximo y el rol del otro más conocedor."
+      />
+
+      <Gallery
+        accent="constructivista"
+        title="Construir con otros"
+        images={[
+          { src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=70", alt: "Trabajo colaborativo entre estudiantes", caption: "El otro es fuente y regulador del aprendizaje" },
+          { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=70", alt: "Niños jugando y construyendo" },
+          { src: "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=700&q=70", alt: "Niños armando piezas" },
+          { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=70", alt: "Estudiantes en debate" },
+          { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=70", alt: "Docente mediando el aprendizaje" },
+        ]}
+      />
+
       <TheoryNav current="constructivista" />
     </SiteLayout>
   );
