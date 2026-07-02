@@ -21,22 +21,41 @@ export function TheoryHero({
   title,
   lead,
   accent,
+  bgImage,
 }: {
   eyebrow: string;
   title: string;
   lead: string;
   accent: Accent;
+  bgImage?: string;
 }) {
   return (
-    <section className={`${accentBg[accent]} text-white`}>
-      <div className="mx-auto max-w-5xl px-5 lg:px-8 py-20 md:py-28">
+    <section className={`relative overflow-hidden ${accentBg[accent]} text-white`}>
+      {bgImage && (
+        <img
+          src={bgImage}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
+        />
+      )}
+      <div
+        aria-hidden="true"
+        className={`absolute inset-0 ${accentBg[accent]} mix-blend-multiply opacity-70`}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"
+      />
+      <div className="relative mx-auto max-w-5xl px-5 lg:px-8 py-20 md:py-28">
         <p className="text-xs md:text-sm uppercase tracking-[0.2em] opacity-80">{eyebrow}</p>
-        <h1 className="mt-4 font-serif text-4xl md:text-6xl leading-[1.05]">{title}</h1>
-        <p className="mt-6 max-w-2xl text-white/90 text-lg leading-relaxed">{lead}</p>
+        <h1 className="mt-4 font-serif text-4xl md:text-6xl leading-[1.05] drop-shadow-md">{title}</h1>
+        <p className="mt-6 max-w-2xl text-white/95 text-lg leading-relaxed drop-shadow">{lead}</p>
       </div>
     </section>
   );
 }
+
 
 export function Section({
   title,

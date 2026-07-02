@@ -8,6 +8,8 @@ import {
   ContextExamples,
   TheoryNav,
 } from "@/components/theory";
+import heroImg from "@/assets/hero-conductista.jpg";
+
 
 export const Route = createFileRoute("/conductista")({
   head: () => ({
@@ -37,7 +39,9 @@ function Page() {
         eyebrow="Teoría del aprendizaje"
         title="Conductismo"
         lead="El aprendizaje entendido como un cambio observable en la conducta, resultado de la interacción entre estímulos del entorno y respuestas del sujeto."
+        bgImage={heroImg}
       />
+
 
       <Section kicker="Idea central" title="¿Qué propone el conductismo?" accent="conductista">
         <p>

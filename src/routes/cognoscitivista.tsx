@@ -8,6 +8,8 @@ import {
   ContextExamples,
   TheoryNav,
 } from "@/components/theory";
+import heroImg from "@/assets/hero-cognoscitivista.jpg";
+
 
 export const Route = createFileRoute("/cognoscitivista")({
   head: () => ({
@@ -37,7 +39,9 @@ function Page() {
         eyebrow="Teoría del aprendizaje"
         title="Cognoscitivismo"
         lead="Aprender es procesar, organizar y almacenar información. El estudiante es un sujeto activo cuyos procesos mentales dan sentido al mundo."
+        bgImage={heroImg}
       />
+
 
       <Section kicker="Idea central" title="¿Qué propone el cognoscitivismo?" accent="cognoscitivista">
         <p>
