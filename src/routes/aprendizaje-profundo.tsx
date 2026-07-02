@@ -90,6 +90,25 @@ function Page() {
         />
       </Section>
 
+      <VideoEmbed
+        accent="profundo"
+        videoId="nXQe7I5WBXs"
+        title="Cómo cambia nuestro cerebro al aprender"
+        caption="David Bueno (Aprendemos Juntos, BBVA) · Neurociencia y aprendizaje profundo."
+      />
+
+      <Gallery
+        accent="profundo"
+        title="Aprender para transformar"
+        images={[
+          { src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=70", alt: "Equipo colaborando en un proyecto", caption: "Proyectos con propósito e impacto real" },
+          { src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=700&q=70", alt: "Estudiantes en un aula moderna" },
+          { src: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=700&q=70", alt: "Laboratorio de ciencias escolar" },
+          { src: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=700&q=70", alt: "Estudiante reflexionando" },
+          { src: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=700&q=70", alt: "Trabajo comunitario" },
+        ]}
+      />
+
       <TheoryNav current="profundo" />
     </SiteLayout>
   );
