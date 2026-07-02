@@ -10,6 +10,7 @@ const nav = [
   { to: "/cognoscitivista", label: "Cognoscitivista" },
   { to: "/constructivista", label: "Constructivista" },
   { to: "/aprendizaje-profundo", label: "Aprendizaje Profundo" },
+  { to: "/juegos", label: "Juegos" },
   { to: "/referencias", label: "Referencias" },
 ] as const;
 
