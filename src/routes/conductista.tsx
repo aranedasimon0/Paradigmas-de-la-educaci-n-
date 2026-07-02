@@ -7,6 +7,8 @@ import {
   PrincipleList,
   ContextExamples,
   TheoryNav,
+  VideoEmbed,
+  Gallery,
 } from "@/components/theory";
 import heroImg from "@/assets/hero-conductista.jpg";
 
