@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ReferenciasRouteImport } from './routes/referencias'
+import { Route as JuegosRouteImport } from './routes/juegos'
 import { Route as ConstructivistaRouteImport } from './routes/constructivista'
 import { Route as ConocenosRouteImport } from './routes/conocenos'
 import { Route as ConductistaRouteImport } from './routes/conductista'
@@ -20,6 +21,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const ReferenciasRoute = ReferenciasRouteImport.update({
   id: '/referencias',
   path: '/referencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JuegosRoute = JuegosRouteImport.update({
+  id: '/juegos',
+  path: '/juegos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConstructivistaRoute = ConstructivistaRouteImport.update({
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/conductista': typeof ConductistaRoute
   '/conocenos': typeof ConocenosRoute
   '/constructivista': typeof ConstructivistaRoute
+  '/juegos': typeof JuegosRoute
   '/referencias': typeof ReferenciasRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/conductista': typeof ConductistaRoute
   '/conocenos': typeof ConocenosRoute
   '/constructivista': typeof ConstructivistaRoute
+  '/juegos': typeof JuegosRoute
   '/referencias': typeof ReferenciasRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/conductista': typeof ConductistaRoute
   '/conocenos': typeof ConocenosRoute
   '/constructivista': typeof ConstructivistaRoute
+  '/juegos': typeof JuegosRoute
   '/referencias': typeof ReferenciasRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/conductista'
     | '/conocenos'
     | '/constructivista'
+    | '/juegos'
     | '/referencias'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/conductista'
     | '/conocenos'
     | '/constructivista'
+    | '/juegos'
     | '/referencias'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/conductista'
     | '/conocenos'
     | '/constructivista'
+    | '/juegos'
     | '/referencias'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   ConductistaRoute: typeof ConductistaRoute
   ConocenosRoute: typeof ConocenosRoute
   ConstructivistaRoute: typeof ConstructivistaRoute
+  JuegosRoute: typeof JuegosRoute
   ReferenciasRoute: typeof ReferenciasRoute
 }
 
@@ -128,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/referencias'
       fullPath: '/referencias'
       preLoaderRoute: typeof ReferenciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/juegos': {
+      id: '/juegos'
+      path: '/juegos'
+      fullPath: '/juegos'
+      preLoaderRoute: typeof JuegosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/constructivista': {
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConductistaRoute: ConductistaRoute,
   ConocenosRoute: ConocenosRoute,
   ConstructivistaRoute: ConstructivistaRoute,
+  JuegosRoute: JuegosRoute,
   ReferenciasRoute: ReferenciasRoute,
 }
 export const routeTree = rootRouteImport

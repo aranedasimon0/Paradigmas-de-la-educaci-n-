@@ -7,6 +7,8 @@ import {
   PrincipleList,
   ContextExamples,
   TheoryNav,
+  VideoEmbed,
+  Gallery,
 } from "@/components/theory";
 import heroImg from "@/assets/hero-conductista.jpg";
 
@@ -141,6 +143,25 @@ function Page() {
           <li>Su aplicación acrítica puede vulnerar la autonomía y la diversidad del aula.</li>
         </ul>
       </Section>
+
+      <VideoEmbed
+        accent="conductista"
+        videoId="hJ3LDbIh3us"
+        title="Watson, Pávlov y Skinner en 10 minutos"
+        caption="Homo Academicus · Una síntesis clara de los principales autores conductistas."
+      />
+
+      <Gallery
+        accent="conductista"
+        title="El conductismo en imágenes"
+        images={[
+          { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1000&q=70", alt: "Aula con pupitres ordenados", caption: "Aulas estructuradas para instrucción directa" },
+          { src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=700&q=70", alt: "Perro entrenado, similar al experimento de Pávlov" },
+          { src: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=700&q=70", alt: "Ejercitación en cuadernos" },
+          { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=70", alt: "Niña levantando la mano en clase" },
+          { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=70", alt: "Estudiantes trabajando en silencio" },
+        ]}
+      />
 
       <TheoryNav current="conductista" />
     </SiteLayout>

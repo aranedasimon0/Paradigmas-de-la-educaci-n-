@@ -10,6 +10,7 @@ const nav = [
   { to: "/cognoscitivista", label: "Cognoscitivista" },
   { to: "/constructivista", label: "Constructivista" },
   { to: "/aprendizaje-profundo", label: "Aprendizaje Profundo" },
+  { to: "/juegos", label: "Juegos" },
   { to: "/referencias", label: "Referencias" },
 ] as const;
 
@@ -21,11 +22,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <header className="sticky top-0 z-40 backdrop-blur bg-background/85 border-b border-border">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8 h-16 flex items-center justify-between gap-6">
-          <Link to="/" className="flex items-center gap-3 group">
-            <img src={logoUrl} alt="Universidad Católica de Temuco" className="h-9 w-auto" />
+        <div className="mx-auto max-w-7xl px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
+          <Link to="/" className="flex items-center gap-4 group">
+            <img src={logoUrl} alt="Universidad Católica de Temuco" className="h-14 md:h-16 w-auto" />
             <span className="hidden sm:flex flex-col leading-tight">
-              <span className="font-serif text-[15px] font-semibold">Educar con Teorías</span>
+              <span className="font-serif text-[17px] font-semibold">Educar con Teorías</span>
               <span className="text-[11px] text-muted-foreground tracking-wide uppercase">UC Temuco · Pedagogía</span>
             </span>
           </Link>
@@ -78,7 +79,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <footer className="mt-20 border-t border-border bg-secondary/40">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-10 grid gap-8 md:grid-cols-3 text-sm">
           <div className="flex items-start gap-3">
-            <img src={logoUrl} alt="UC Temuco" className="h-10 w-auto" />
+            <img src={logoUrl} alt="UC Temuco" className="h-16 w-auto" />
             <div>
               <p className="font-serif font-semibold">Educar con Teorías</p>
               <p className="text-muted-foreground mt-1">

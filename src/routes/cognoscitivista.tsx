@@ -7,6 +7,8 @@ import {
   PrincipleList,
   ContextExamples,
   TheoryNav,
+  VideoEmbed,
+  Gallery,
 } from "@/components/theory";
 import heroImg from "@/assets/hero-cognoscitivista.jpg";
 
@@ -139,6 +141,25 @@ function Page() {
           <li>No siempre visibiliza los factores emocionales y motivacionales del aprender.</li>
         </ul>
       </Section>
+
+      <VideoEmbed
+        accent="cognoscitivista"
+        videoId="jVV3N4T7X7s"
+        title="Cognitivismo: entendiendo el aprendizaje y la mente"
+        caption="Pedagogía Digital · Piaget, Bruner, Ausubel y el procesamiento de la información."
+      />
+
+      <Gallery
+        accent="cognoscitivista"
+        title="Procesar, organizar, comprender"
+        images={[
+          { src: "https://images.unsplash.com/photo-1584697964358-3e14ca57658b?auto=format&fit=crop&w=1000&q=70", alt: "Ilustración del cerebro y sinapsis", caption: "Los procesos internos son el foco del aprender" },
+          { src: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=700&q=70", alt: "Estudiante leyendo con concentración" },
+          { src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=70", alt: "Mapa mental dibujado a mano" },
+          { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=70", alt: "Niña resolviendo un problema" },
+          { src: "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=700&q=70", alt: "Piezas de ajedrez, planificación estratégica" },
+        ]}
+      />
 
       <TheoryNav current="cognoscitivista" />
     </SiteLayout>

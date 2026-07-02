@@ -155,6 +155,81 @@ export function ContextExamples({
   );
 }
 
+export function VideoEmbed({
+  videoId,
+  title,
+  caption,
+  accent,
+}: {
+  videoId: string;
+  title: string;
+  caption?: string;
+  accent: Accent;
+}) {
+  return (
+    <section className="mx-auto max-w-5xl px-5 lg:px-8 py-6 md:py-10">
+      <p className={`text-xs uppercase tracking-[0.18em] font-medium mb-3 ${accentText[accent]}`}>
+        Video recomendado
+      </p>
+      <h2 className="font-serif text-2xl md:text-3xl mb-5">{title}</h2>
+      <div className="relative aspect-video rounded-2xl overflow-hidden border border-border shadow-lg shadow-black/5 bg-black">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          loading="lazy"
+          className="absolute inset-0 h-full w-full"
+        />
+      </div>
+      {caption && <p className="mt-3 text-sm text-muted-foreground">{caption}</p>}
+    </section>
+  );
+}
+
+export function Gallery({
+  images,
+  accent,
+  kicker = "Galería",
+  title = "Imágenes del enfoque",
+}: {
+  images: { src: string; alt: string; caption?: string }[];
+  accent: Accent;
+  kicker?: string;
+  title?: string;
+}) {
+  return (
+    <section className="mx-auto max-w-6xl px-5 lg:px-8 py-10 md:py-14">
+      <p className={`text-xs uppercase tracking-[0.18em] font-medium mb-3 ${accentText[accent]}`}>
+        {kicker}
+      </p>
+      <h2 className="font-serif text-2xl md:text-3xl mb-6">{title}</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+        {images.map((img, i) => (
+          <figure
+            key={img.src}
+            className={`relative overflow-hidden rounded-2xl border border-border bg-muted ${
+              i === 0 ? "col-span-2 row-span-2 aspect-[4/3]" : "aspect-square"
+            }`}
+          >
+            <img
+              src={img.src}
+              alt={img.alt}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+            {img.caption && (
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-xs text-white">
+                {img.caption}
+              </figcaption>
+            )}
+          </figure>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function TheoryNav({ current }: { current: Accent }) {
   const others = (
     [
