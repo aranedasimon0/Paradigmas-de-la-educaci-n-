@@ -7,6 +7,8 @@ import {
   ContextExamples,
   TheoryNav,
 } from "@/components/theory";
+import heroImg from "@/assets/hero-profundo.jpg";
+
 
 export const Route = createFileRoute("/aprendizaje-profundo")({
   head: () => ({
@@ -36,7 +38,9 @@ function Page() {
         eyebrow="Enfoque contemporáneo"
         title="Aprendizaje Profundo"
         lead="Más que memorizar contenidos: aprender de forma duradera, transferible y significativa para la vida y la ciudadanía."
+        bgImage={heroImg}
       />
+
 
       <Section kicker="Idea central" title="¿Qué es el aprendizaje profundo?" accent="profundo">
         <p>

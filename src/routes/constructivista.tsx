@@ -8,6 +8,8 @@ import {
   ContextExamples,
   TheoryNav,
 } from "@/components/theory";
+import heroImg from "@/assets/hero-constructivista.jpg";
+
 
 export const Route = createFileRoute("/constructivista")({
   head: () => ({
@@ -37,7 +39,9 @@ function Page() {
         eyebrow="Teoría del aprendizaje"
         title="Constructivismo"
         lead="El conocimiento no se transmite, se construye. Aprender es dar sentido a la experiencia mediante la interacción con el mundo y con los otros."
+        bgImage={heroImg}
       />
+
 
       <Section kicker="Idea central" title="¿Qué propone el constructivismo?" accent="constructivista">
         <p>
