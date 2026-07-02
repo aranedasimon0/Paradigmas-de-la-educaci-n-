@@ -79,7 +79,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <footer className="mt-20 border-t border-border bg-secondary/40">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-10 grid gap-8 md:grid-cols-3 text-sm">
           <div className="flex items-start gap-3">
-            <img src={logoUrl} alt="UC Temuco" className="h-10 w-auto" />
+            <img src={logoUrl} alt="UC Temuco" className="h-16 w-auto" />
             <div>
               <p className="font-serif font-semibold">Educar con Teorías</p>
               <p className="text-muted-foreground mt-1">
