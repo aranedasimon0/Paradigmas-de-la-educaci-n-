@@ -230,6 +230,43 @@ export function Gallery({
   );
 }
 
+export function Citation({
+  quote,
+  author,
+  year,
+  page,
+  reference,
+  accent,
+}: {
+  quote: string;
+  author: string;
+  year: string | number;
+  page?: string;
+  reference: ReactNode;
+  accent: Accent;
+}) {
+  return (
+    <figure className="not-prose my-6 rounded-2xl border border-border bg-card p-6">
+      <div className={`h-1 w-10 rounded-full ${accentBg[accent]} mb-4`} />
+      <blockquote className="font-serif text-lg md:text-xl leading-relaxed text-foreground/90">
+        <span className="mr-1 text-2xl leading-none align-[-2px] text-muted-foreground">“</span>
+        {quote}
+        <span className="ml-1 text-2xl leading-none align-[-2px] text-muted-foreground">”</span>
+      </blockquote>
+      <figcaption className="mt-4 text-sm text-foreground/75">
+        <span className="font-medium">
+          ({author}, {year}
+          {page ? `, p. ${page}` : ""})
+        </span>
+        <span className="block mt-2 text-[13px] text-muted-foreground leading-relaxed" style={{ paddingLeft: "1.5em", textIndent: "-1.5em" }}>
+          {reference}
+        </span>
+      </figcaption>
+    </figure>
+  );
+}
+
+
 export function TheoryNav({ current }: { current: Accent }) {
   const others = (
     [

@@ -9,6 +9,7 @@ import {
   TheoryNav,
   VideoEmbed,
   Gallery,
+  Citation,
 } from "@/components/theory";
 import heroImg from "@/assets/hero-constructivista.jpg";
 
@@ -56,6 +57,18 @@ function Page() {
           desafiantes, formula preguntas, ofrece andamiajes y confía en la capacidad de sus
           estudiantes de construir sus propias respuestas.
         </p>
+        <Citation
+          accent="constructivista"
+          quote="La zona de desarrollo próximo es la distancia entre el nivel real de desarrollo, determinado por la resolución independiente de problemas, y el nivel de desarrollo potencial, determinado a través de la resolución de problemas bajo la guía de un adulto o en colaboración con pares más capaces."
+          author="Vygotsky"
+          year="1978"
+          page="86"
+          reference={
+            <>
+              Vygotsky, L. S. (1978). <em>Mind in society: The development of higher psychological processes</em>. Harvard University Press.
+            </>
+          }
+        />
       </Section>
 
       <Section kicker="Principios" title="Ideas fuerza del enfoque" accent="constructivista">
@@ -131,6 +144,18 @@ function Page() {
             "Comunidades de práctica en internet donde se construye conocimiento colectivo.",
             "Juego simbólico y de roles entre pares en el patio o en el barrio.",
           ]}
+        />
+        <Citation
+          accent="constructivista"
+          quote="El conocimiento no es una copia de la realidad, sino una construcción del ser humano; se construye a partir de los esquemas que la persona ya posee y de la actividad que realiza con el objeto de conocimiento."
+          author="Carretero"
+          year="2009"
+          page="21"
+          reference={
+            <>
+              Carretero, M. (2009). <em>Constructivismo y educación</em>. Paidós.
+            </>
+          }
         />
       </Section>
 
