@@ -145,6 +145,18 @@ function Page() {
             "Conversaciones familiares que hacen preguntas metacognitivas al niño o niña.",
           ]}
         />
+        <Citation
+          accent="cognitivista"
+          quote="Cualquier materia puede enseñarse de manera intelectualmente honesta a cualquier niño en cualquier etapa de su desarrollo."
+          author="Bruner"
+          year="1966"
+          page="33"
+          reference={
+            <>
+              Bruner, J. S. (1966). <em>Toward a theory of instruction</em>. Harvard University Press.
+            </>
+          }
+        />
       </Section>
 
       <Section kicker="Mirada crítica" title="Aspectos a tener presentes" accent="cognitivista">
