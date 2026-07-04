@@ -21,40 +21,41 @@ export const Route = createFileRoute("/referencias")({
   component: Page,
 });
 
-const refs = [
+type Ref = { text: React.ReactNode };
+const refs: { group: string; items: Ref[] }[] = [
   {
     group: "Conductismo",
     items: [
-      "Pavlov, I. (1927). Conditioned Reflexes. Oxford University Press.",
-      "Watson, J. B. (1913). Psychology as the behaviorist views it. Psychological Review, 20(2), 158–177.",
-      "Skinner, B. F. (1953). Science and human behavior. Macmillan.",
-      "Thorndike, E. L. (1911). Animal intelligence. Macmillan.",
+      { text: <>Pavlov, I. P. (1927). <em>Conditioned reflexes: An investigation of the physiological activity of the cerebral cortex</em> (G. V. Anrep, Trad.). Oxford University Press.</> },
+      { text: <>Skinner, B. F. (1953). <em>Science and human behavior</em>. Macmillan.</> },
+      { text: <>Thorndike, E. L. (1911). <em>Animal intelligence: Experimental studies</em>. Macmillan.</> },
+      { text: <>Watson, J. B. (1913). Psychology as the behaviorist views it. <em>Psychological Review, 20</em>(2), 158–177. https://doi.org/10.1037/h0074428</> },
     ],
   },
   {
     group: "Cognitivismo",
     items: [
-      "Ausubel, D. (1968). Educational psychology: A cognitive view. Holt, Rinehart & Winston.",
-      "Bruner, J. (1966). Toward a theory of instruction. Harvard University Press.",
-      "Gagné, R. (1985). The conditions of learning. Holt, Rinehart & Winston.",
-      "Piaget, J. (1970). La epistemología genética. Ariel.",
+      { text: <>Ausubel, D. P. (1968). <em>Educational psychology: A cognitive view</em>. Holt, Rinehart &amp; Winston.</> },
+      { text: <>Bruner, J. S. (1966). <em>Toward a theory of instruction</em>. Harvard University Press.</> },
+      { text: <>Gagné, R. M. (1985). <em>The conditions of learning</em> (4.ª ed.). Holt, Rinehart &amp; Winston.</> },
+      { text: <>Piaget, J. (1970). <em>La epistemología genética</em>. Ariel.</> },
     ],
   },
   {
     group: "Constructivismo",
     items: [
-      "Vygotsky, L. S. (1978). Mind in society. Harvard University Press.",
-      "Coll, C. (1990). Aprendizaje escolar y construcción del conocimiento. Paidós.",
-      "Carretero, M. (2009). Constructivismo y educación. Paidós.",
-      "Perkins, D. (2010). El aprendizaje pleno. Paidós.",
+      { text: <>Carretero, M. (2009). <em>Constructivismo y educación</em>. Paidós.</> },
+      { text: <>Coll, C. (1990). <em>Aprendizaje escolar y construcción del conocimiento</em>. Paidós.</> },
+      { text: <>Perkins, D. (2010). <em>El aprendizaje pleno: Principios de la enseñanza para transformar la educación</em>. Paidós.</> },
+      { text: <>Vygotsky, L. S. (1978). <em>Mind in society: The development of higher psychological processes</em>. Harvard University Press.</> },
     ],
   },
   {
     group: "Aprendizaje profundo",
     items: [
-      "Fullan, M., Quinn, J., & McEachen, J. (2018). Deep Learning: Engage the World, Change the World. Corwin.",
-      "OECD (2019). OECD Learning Compass 2030. OECD Publishing.",
-      "Mineduc (2015). Bases Curriculares 7° básico a 2° medio. Ministerio de Educación de Chile.",
+      { text: <>Fullan, M., Quinn, J., &amp; McEachen, J. (2018). <em>Deep learning: Engage the world, change the world</em>. Corwin.</> },
+      { text: <>Ministerio de Educación de Chile. (2015). <em>Bases curriculares 7.º básico a 2.º medio</em>. Mineduc.</> },
+      { text: <>Organización para la Cooperación y el Desarrollo Económicos. (2019). <em>OECD learning compass 2030</em>. OECD Publishing.</> },
     ],
   },
 ];
@@ -68,8 +69,8 @@ function Page() {
           Referencias que sostienen este sitio.
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-foreground/75 leading-relaxed">
-          Obras clásicas y contemporáneas sobre teorías del aprendizaje, agrupadas por corriente,
-          que pueden servir como puerta de entrada para profundizar cada tema.
+          Bibliografía en formato APA 7, agrupada por corriente teórica. Se citan las obras
+          originales y textos de referencia en español que sustentan el contenido del sitio.
         </p>
       </section>
 
@@ -78,12 +79,13 @@ function Page() {
           <div key={r.group}>
             <h2 className="font-serif text-2xl mb-4">{r.group}</h2>
             <ul className="space-y-3">
-              {r.items.map((ref) => (
+              {r.items.map((ref, i) => (
                 <li
-                  key={ref}
+                  key={i}
                   className="rounded-xl border border-border bg-card p-4 text-[15px] leading-relaxed text-foreground/85"
+                  style={{ paddingLeft: "2.5em", textIndent: "-1.5em" }}
                 >
-                  {ref}
+                  {ref.text}
                 </li>
               ))}
             </ul>
@@ -93,8 +95,8 @@ function Page() {
 
       <section className="mx-auto max-w-5xl px-5 lg:px-8 pb-16">
         <p className="text-sm text-muted-foreground">
-          Nota: las referencias listadas cumplen una función pedagógica dentro del proyecto y
-          pueden ser complementadas por cada docente según el nivel y contexto educativo.
+          Nota: las referencias siguen las normas APA (7.ª ed.). Cada docente puede complementarlas
+          según el nivel y el contexto educativo en el que trabaje.
         </p>
       </section>
     </SiteLayout>
