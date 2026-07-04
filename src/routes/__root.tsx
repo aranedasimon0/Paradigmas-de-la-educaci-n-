@@ -87,7 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Recurso pedagógico interactivo sobre las principales teorías del aprendizaje (conductista, cognoscitivista, constructivista y aprendizaje profundo) para docentes en formación de la Universidad Católica de Temuco.",
+          "Recurso pedagógico interactivo sobre las principales teorías del aprendizaje (conductista, cognitivista, constructivista y aprendizaje profundo) para docentes en formación de la Universidad Católica de Temuco.",
       },
       { name: "author", content: "Simón Araneda, Bruno Sandoval, Génesis Contreras, Joaquín Yañez" },
       { property: "og:title", content: "Educar con Teorías — Teorías del Aprendizaje" },

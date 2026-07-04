@@ -33,7 +33,7 @@ type Q = {
 const QUIZ: Q[] = [
   {
     q: "¿Qué teoría concibe el aprendizaje como un cambio observable en la conducta?",
-    options: ["Conductismo", "Cognoscitivismo", "Constructivismo", "Aprendizaje profundo"],
+    options: ["Conductismo", "Cognitivismo", "Constructivismo", "Aprendizaje profundo"],
     answer: 0,
     explanation: "El conductismo (Watson, Skinner, Pávlov) se centra en la conducta observable.",
   },
@@ -69,9 +69,9 @@ const QUIZ: Q[] = [
   },
   {
     q: "Los organizadores previos y mapas conceptuales son estrategias típicas del enfoque:",
-    options: ["Conductista", "Cognoscitivista", "Skinneriano", "Pavloviano"],
+    options: ["Conductista", "Cognitivista", "Skinneriano", "Pavloviano"],
     answer: 1,
-    explanation: "Son herramientas cognoscitivas para organizar la información.",
+    explanation: "Son herramientas cognitivas para organizar la información.",
   },
 ];
 
@@ -183,8 +183,8 @@ type Pair = { author: string; theory: string; accent: string };
 const PAIRS: Pair[] = [
   { author: "Iván Pávlov", theory: "Conductismo", accent: "bg-conductista" },
   { author: "B. F. Skinner", theory: "Conductismo", accent: "bg-conductista" },
-  { author: "Jean Piaget", theory: "Cognoscitivismo", accent: "bg-cognoscitivista" },
-  { author: "David Ausubel", theory: "Cognoscitivismo", accent: "bg-cognoscitivista" },
+  { author: "Jean Piaget", theory: "Cognitivismo", accent: "bg-cognitivista" },
+  { author: "David Ausubel", theory: "Cognitivismo", accent: "bg-cognitivista" },
   { author: "Lev Vygotsky", theory: "Constructivismo", accent: "bg-constructivista" },
   { author: "Jerome Bruner", theory: "Constructivismo", accent: "bg-constructivista" },
   { author: "Michael Fullan", theory: "Aprendizaje profundo", accent: "bg-profundo" },
