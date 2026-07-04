@@ -58,6 +58,18 @@ function Page() {
           ser predichas y controladas si se manipula adecuadamente el ambiente. La enseñanza se
           organiza en objetivos claros, secuencias graduadas y retroalimentación inmediata.
         </p>
+        <Citation
+          accent="conductista"
+          quote="La psicología, tal como la ve el conductista, es una rama puramente objetiva y experimental de las ciencias naturales."
+          author="Watson"
+          year="1913"
+          page="158"
+          reference={
+            <>
+              Watson, J. B. (1913). Psychology as the behaviorist views it. <em>Psychological Review, 20</em>(2), 158–177. https://doi.org/10.1037/h0074428
+            </>
+          }
+        />
       </Section>
 
       <Section kicker="Principios" title="Cinco ideas para reconocerlo" accent="conductista">
