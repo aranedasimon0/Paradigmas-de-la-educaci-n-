@@ -146,6 +146,17 @@ function Page() {
             "Entrenamiento deportivo basado en repetición y feedback inmediato.",
           ]}
         />
+        <Citation
+          accent="conductista"
+          quote="Las consecuencias de la conducta determinan la probabilidad de que la conducta vuelva a ocurrir."
+          author="Skinner"
+          year="1953"
+          reference={
+            <>
+              Skinner, B. F. (1953). <em>Science and human behavior</em>. Macmillan.
+            </>
+          }
+        />
       </Section>
 
       <Section kicker="Mirada crítica" title="Limitaciones que un docente debe considerar" accent="conductista">
