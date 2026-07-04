@@ -57,6 +57,18 @@ function Page() {
           desafiantes, formula preguntas, ofrece andamiajes y confía en la capacidad de sus
           estudiantes de construir sus propias respuestas.
         </p>
+        <Citation
+          accent="constructivista"
+          quote="La zona de desarrollo próximo es la distancia entre el nivel real de desarrollo, determinado por la resolución independiente de problemas, y el nivel de desarrollo potencial, determinado a través de la resolución de problemas bajo la guía de un adulto o en colaboración con pares más capaces."
+          author="Vygotsky"
+          year="1978"
+          page="86"
+          reference={
+            <>
+              Vygotsky, L. S. (1978). <em>Mind in society: The development of higher psychological processes</em>. Harvard University Press.
+            </>
+          }
+        />
       </Section>
 
       <Section kicker="Principios" title="Ideas fuerza del enfoque" accent="constructivista">
