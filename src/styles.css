@@ -30,7 +30,7 @@
   --color-border: var(--border);
   --color-ring: var(--ring);
   --color-conductista: var(--conductista);
-  --color-cognoscitivista: var(--cognoscitivista);
+  --color-cognitivista: var(--cognitivista);
   --color-constructivista: var(--constructivista);
   --color-profundo: var(--profundo);
 }
@@ -55,7 +55,7 @@
 
   /* Theory accents */
   --conductista: oklch(0.55 0.15 30);      /* terracotta */
-  --cognoscitivista: oklch(0.5 0.13 265);  /* indigo */
+  --cognitivista: oklch(0.5 0.13 265);  /* indigo */
   --constructivista: oklch(0.55 0.14 155); /* forest */
   --profundo: oklch(0.55 0.15 320);        /* plum */
 }

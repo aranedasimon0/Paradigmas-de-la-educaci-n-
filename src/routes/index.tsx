@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Plataforma educativa sobre las teorías del aprendizaje: comprender, aplicar y reflexionar sobre modelos conductistas, cognoscitivistas y constructivistas en la práctica docente.",
+          "Plataforma educativa sobre las teorías del aprendizaje: comprender, aplicar y reflexionar sobre modelos conductistas, cognitivistas y constructivistas en la práctica docente.",
       },
       { property: "og:title", content: "Educar con Teorías — El corazón del profesorado" },
       {
@@ -31,11 +31,11 @@ const theories = [
     accent: "bg-conductista",
   },
   {
-    to: "/cognoscitivista",
+    to: "/cognitivista",
     tag: "Procesar · Comprender",
-    title: "Teoría Cognoscitivista",
+    title: "Teoría Cognitivista",
     body: "El estudiante como procesador activo de información: atención, memoria y estructuras mentales.",
-    accent: "bg-cognoscitivista",
+    accent: "bg-cognitivista",
   },
   {
     to: "/constructivista",

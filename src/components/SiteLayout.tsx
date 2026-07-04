@@ -6,7 +6,7 @@ const nav = [
   { to: "/", label: "Inicio" },
   { to: "/conocenos", label: "Conócenos" },
   { to: "/conductista", label: "Conductista" },
-  { to: "/cognoscitivista", label: "Cognoscitivista" },
+  { to: "/cognitivista", label: "Cognitivista" },
   { to: "/constructivista", label: "Constructivista" },
   { to: "/aprendizaje-profundo", label: "Aprendizaje Profundo" },
   { to: "/juegos", label: "Juegos" },

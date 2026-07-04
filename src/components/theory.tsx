@@ -1,17 +1,17 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 
-type Accent = "conductista" | "cognoscitivista" | "constructivista" | "profundo";
+type Accent = "conductista" | "cognitivista" | "constructivista" | "profundo";
 
 const accentBg: Record<Accent, string> = {
   conductista: "bg-conductista",
-  cognoscitivista: "bg-cognoscitivista",
+  cognitivista: "bg-cognitivista",
   constructivista: "bg-constructivista",
   profundo: "bg-profundo",
 };
 const accentText: Record<Accent, string> = {
   conductista: "text-conductista",
-  cognoscitivista: "text-cognoscitivista",
+  cognitivista: "text-cognitivista",
   constructivista: "text-constructivista",
   profundo: "text-profundo",
 };
@@ -234,7 +234,7 @@ export function TheoryNav({ current }: { current: Accent }) {
   const others = (
     [
       { to: "/conductista", label: "Conductista", a: "conductista" },
-      { to: "/cognoscitivista", label: "Cognoscitivista", a: "cognoscitivista" },
+      { to: "/cognitivista", label: "Cognitivista", a: "cognitivista" },
       { to: "/constructivista", label: "Constructivista", a: "constructivista" },
       { to: "/aprendizaje-profundo", label: "Aprendizaje Profundo", a: "profundo" },
     ] as const

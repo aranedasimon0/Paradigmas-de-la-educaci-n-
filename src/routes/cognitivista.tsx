@@ -10,23 +10,23 @@ import {
   VideoEmbed,
   Gallery,
 } from "@/components/theory";
-import heroImg from "@/assets/hero-cognoscitivista.jpg";
+import heroImg from "@/assets/hero-cognitivista.jpg";
 
 
-export const Route = createFileRoute("/cognoscitivista")({
+export const Route = createFileRoute("/cognitivista")({
   head: () => ({
     meta: [
-      { title: "Teoría Cognoscitivista del Aprendizaje | Educar con Teorías" },
+      { title: "Teoría Cognitivista del Aprendizaje | Educar con Teorías" },
       {
         name: "description",
         content:
-          "Principios, autores (Piaget, Ausubel, Bruner, Gagné) y aplicaciones del cognoscitivismo: el estudiante como procesador activo de información.",
+          "Principios, autores (Piaget, Ausubel, Bruner, Gagné) y aplicaciones del cognitivismo: el estudiante como procesador activo de información.",
       },
-      { property: "og:title", content: "Teoría Cognoscitivista del Aprendizaje" },
+      { property: "og:title", content: "Teoría Cognitivista del Aprendizaje" },
       {
         property: "og:description",
         content:
-          "Descubre cómo el enfoque cognoscitivo explica atención, memoria y comprensión en el aprendizaje escolar.",
+          "Descubre cómo el enfoque cognitivo explica atención, memoria y comprensión en el aprendizaje escolar.",
       },
     ],
   }),
@@ -37,15 +37,15 @@ function Page() {
   return (
     <SiteLayout>
       <TheoryHero
-        accent="cognoscitivista"
+        accent="cognitivista"
         eyebrow="Teoría del aprendizaje"
-        title="Cognoscitivismo"
+        title="Cognitivismo"
         lead="Aprender es procesar, organizar y almacenar información. El estudiante es un sujeto activo cuyos procesos mentales dan sentido al mundo."
         bgImage={heroImg}
       />
 
 
-      <Section kicker="Idea central" title="¿Qué propone el cognoscitivismo?" accent="cognoscitivista">
+      <Section kicker="Idea central" title="¿Qué propone el cognitivismo?" accent="cognitivista">
         <p>
           A partir de la segunda mitad del siglo XX, la psicología cognitiva puso el foco en los
           procesos internos que ocurren entre el estímulo y la respuesta: atención, percepción,
@@ -58,7 +58,7 @@ function Page() {
         </p>
       </Section>
 
-      <Section kicker="Principios" title="Ideas clave del enfoque" accent="cognoscitivista">
+      <Section kicker="Principios" title="Ideas clave del enfoque" accent="cognitivista">
         <PrincipleList
           items={[
             {
@@ -85,28 +85,28 @@ function Page() {
         />
       </Section>
 
-      <Section kicker="Autores clave" title="Referentes del enfoque cognitivo" accent="cognoscitivista">
+      <Section kicker="Autores clave" title="Referentes del enfoque cognitivo" accent="cognitivista">
         <div className="grid sm:grid-cols-2 gap-4 not-prose mt-6">
           <AuthorCard
-            accent="cognoscitivista"
+            accent="cognitivista"
             name="Jean Piaget"
             years="1896 — 1980"
             contribution="Describe estadios del desarrollo cognitivo y los mecanismos de asimilación y acomodación."
           />
           <AuthorCard
-            accent="cognoscitivista"
+            accent="cognitivista"
             name="David Ausubel"
             years="1918 — 2008"
             contribution="Formula la teoría del aprendizaje significativo y el papel de los organizadores previos."
           />
           <AuthorCard
-            accent="cognoscitivista"
+            accent="cognitivista"
             name="Jerome Bruner"
             years="1915 — 2016"
             contribution="Propone el aprendizaje por descubrimiento y el currículo en espiral."
           />
           <AuthorCard
-            accent="cognoscitivista"
+            accent="cognitivista"
             name="Robert Gagné"
             years="1916 — 2002"
             contribution="Sistematiza las condiciones internas y externas del aprendizaje en eventos instruccionales."
@@ -114,13 +114,13 @@ function Page() {
         </div>
       </Section>
 
-      <Section kicker="Aplicación" title="El cognoscitivismo en la práctica" accent="cognoscitivista">
+      <Section kicker="Aplicación" title="El cognitivismo en la práctica" accent="cognitivista">
         <p>
           Cuando el objetivo es comprender, relacionar y transferir conocimientos, el enfoque
-          cognoscitivo aporta estrategias potentes tanto en el aula como fuera de ella.
+          cognitivo aporta estrategias potentes tanto en el aula como fuera de ella.
         </p>
         <ContextExamples
-          accent="cognoscitivista"
+          accent="cognitivista"
           formal={[
             "Uso de mapas conceptuales y organizadores gráficos en secundaria.",
             "Actividades de resolución de problemas contextualizados en ciencias.",
@@ -134,7 +134,7 @@ function Page() {
         />
       </Section>
 
-      <Section kicker="Mirada crítica" title="Aspectos a tener presentes" accent="cognoscitivista">
+      <Section kicker="Mirada crítica" title="Aspectos a tener presentes" accent="cognitivista">
         <ul className="list-disc pl-5 space-y-2">
           <li>Puede sobrevalorar los procesos individuales y desatender la dimensión social.</li>
           <li>Su aplicación exige planificación cuidadosa y buen dominio disciplinar del docente.</li>
@@ -143,14 +143,14 @@ function Page() {
       </Section>
 
       <VideoEmbed
-        accent="cognoscitivista"
+        accent="cognitivista"
         videoId="jVV3N4T7X7s"
         title="Cognitivismo: entendiendo el aprendizaje y la mente"
         caption="Pedagogía Digital · Piaget, Bruner, Ausubel y el procesamiento de la información."
       />
 
       <Gallery
-        accent="cognoscitivista"
+        accent="cognitivista"
         title="Procesar, organizar, comprender"
         images={[
           { src: "https://images.unsplash.com/photo-1584697964358-3e14ca57658b?auto=format&fit=crop&w=1000&q=70", alt: "Ilustración del cerebro y sinapsis", caption: "Los procesos internos son el foco del aprender" },
@@ -161,7 +161,7 @@ function Page() {
         ]}
       />
 
-      <TheoryNav current="cognoscitivista" />
+      <TheoryNav current="cognitivista" />
     </SiteLayout>
   );
 }

@@ -32,7 +32,7 @@ const refs = [
     ],
   },
   {
-    group: "Cognoscitivismo",
+    group: "Cognitivismo",
     items: [
       "Ausubel, D. (1968). Educational psychology: A cognitive view. Holt, Rinehart & Winston.",
       "Bruner, J. (1966). Toward a theory of instruction. Harvard University Press.",
