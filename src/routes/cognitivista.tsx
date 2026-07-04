@@ -57,6 +57,18 @@ function Page() {
           estructuras mentales del estudiante. Enseñar implica presentar la información de forma
           significativa y ayudar a construir esquemas cada vez más complejos.
         </p>
+        <Citation
+          accent="cognitivista"
+          quote="Si tuviera que reducir toda la psicología educativa a un solo principio, enunciaría este: el factor más importante que influye en el aprendizaje es lo que el alumno ya sabe. Averígüese esto y enséñese en consecuencia."
+          author="Ausubel"
+          year="1968"
+          page="vi"
+          reference={
+            <>
+              Ausubel, D. P. (1968). <em>Educational psychology: A cognitive view</em>. Holt, Rinehart &amp; Winston.
+            </>
+          }
+        />
       </Section>
 
       <Section kicker="Principios" title="Ideas clave del enfoque" accent="cognitivista">
