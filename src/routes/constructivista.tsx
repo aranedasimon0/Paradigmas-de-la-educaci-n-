@@ -9,6 +9,7 @@ import {
   TheoryNav,
   VideoEmbed,
   Gallery,
+  Citation,
 } from "@/components/theory";
 import heroImg from "@/assets/hero-constructivista.jpg";
 
