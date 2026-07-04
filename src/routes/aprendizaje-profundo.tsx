@@ -101,6 +101,18 @@ function Page() {
             "Espacios de mentoría entre pares o intergeneracionales.",
           ]}
         />
+        <Citation
+          accent="profundo"
+          quote="El aprendizaje pleno consiste en jugar el juego completo desde el comienzo, aunque sea una versión reducida, en lugar de practicar por años las partes por separado."
+          author="Perkins"
+          year="2010"
+          page="24"
+          reference={
+            <>
+              Perkins, D. (2010). <em>El aprendizaje pleno: Principios de la enseñanza para transformar la educación</em>. Paidós.
+            </>
+          }
+        />
       </Section>
 
       <VideoEmbed
