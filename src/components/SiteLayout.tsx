@@ -1,7 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import logoAsset from "@/assets/uct-logo.png.asset.json";
-const logoUrl = logoAsset.url;
+const logoUrl = "/uct-logo.png";
 
 const nav = [
   { to: "/", label: "Inicio" },
