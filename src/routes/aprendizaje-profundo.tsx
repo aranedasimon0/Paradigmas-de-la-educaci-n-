@@ -56,6 +56,18 @@ function Page() {
           aprendizaje profundo busca que el estudiante comprenda, relacione, aplique y
           transforme aquello que aprende, tanto dentro como fuera de la escuela.
         </p>
+        <Citation
+          accent="profundo"
+          quote="El aprendizaje profundo es el proceso de adquirir las seis competencias globales: carácter, ciudadanía, colaboración, comunicación, creatividad y pensamiento crítico."
+          author="Fullan et al."
+          year="2018"
+          page="17"
+          reference={
+            <>
+              Fullan, M., Quinn, J., &amp; McEachen, J. (2018). <em>Deep learning: Engage the world, change the world</em>. Corwin.
+            </>
+          }
+        />
       </Section>
 
       <Section kicker="Las 6 C" title="Dimensiones del aprendizaje profundo" accent="profundo">
