@@ -145,6 +145,18 @@ function Page() {
             "Juego simbólico y de roles entre pares en el patio o en el barrio.",
           ]}
         />
+        <Citation
+          accent="constructivista"
+          quote="El conocimiento no es una copia de la realidad, sino una construcción del ser humano; se construye a partir de los esquemas que la persona ya posee y de la actividad que realiza con el objeto de conocimiento."
+          author="Carretero"
+          year="2009"
+          page="21"
+          reference={
+            <>
+              Carretero, M. (2009). <em>Constructivismo y educación</em>. Paidós.
+            </>
+          }
+        />
       </Section>
 
       <Section kicker="Mirada crítica" title="Tensiones a considerar" accent="constructivista">
