@@ -14,7 +14,7 @@ import { Route as JuegosRouteImport } from './routes/juegos'
 import { Route as ConstructivistaRouteImport } from './routes/constructivista'
 import { Route as ConocenosRouteImport } from './routes/conocenos'
 import { Route as ConductistaRouteImport } from './routes/conductista'
-import { Route as CognoscitivistaRouteImport } from './routes/cognoscitivista'
+import { Route as CognitivistaRouteImport } from './routes/cognitivista'
 import { Route as AprendizajeProfundoRouteImport } from './routes/aprendizaje-profundo'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -43,9 +43,9 @@ const ConductistaRoute = ConductistaRouteImport.update({
   path: '/conductista',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CognoscitivistaRoute = CognoscitivistaRouteImport.update({
-  id: '/cognoscitivista',
-  path: '/cognoscitivista',
+const CognitivistaRoute = CognitivistaRouteImport.update({
+  id: '/cognitivista',
+  path: '/cognitivista',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AprendizajeProfundoRoute = AprendizajeProfundoRouteImport.update({
@@ -62,7 +62,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aprendizaje-profundo': typeof AprendizajeProfundoRoute
-  '/cognoscitivista': typeof CognoscitivistaRoute
+  '/cognitivista': typeof CognitivistaRoute
   '/conductista': typeof ConductistaRoute
   '/conocenos': typeof ConocenosRoute
   '/constructivista': typeof ConstructivistaRoute
@@ -72,7 +72,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aprendizaje-profundo': typeof AprendizajeProfundoRoute
-  '/cognoscitivista': typeof CognoscitivistaRoute
+  '/cognitivista': typeof CognitivistaRoute
   '/conductista': typeof ConductistaRoute
   '/conocenos': typeof ConocenosRoute
   '/constructivista': typeof ConstructivistaRoute
@@ -83,7 +83,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aprendizaje-profundo': typeof AprendizajeProfundoRoute
-  '/cognoscitivista': typeof CognoscitivistaRoute
+  '/cognitivista': typeof CognitivistaRoute
   '/conductista': typeof ConductistaRoute
   '/conocenos': typeof ConocenosRoute
   '/constructivista': typeof ConstructivistaRoute
@@ -95,7 +95,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aprendizaje-profundo'
-    | '/cognoscitivista'
+    | '/cognitivista'
     | '/conductista'
     | '/conocenos'
     | '/constructivista'
@@ -105,7 +105,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/aprendizaje-profundo'
-    | '/cognoscitivista'
+    | '/cognitivista'
     | '/conductista'
     | '/conocenos'
     | '/constructivista'
@@ -115,7 +115,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/aprendizaje-profundo'
-    | '/cognoscitivista'
+    | '/cognitivista'
     | '/conductista'
     | '/conocenos'
     | '/constructivista'
@@ -126,7 +126,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AprendizajeProfundoRoute: typeof AprendizajeProfundoRoute
-  CognoscitivistaRoute: typeof CognoscitivistaRoute
+  CognitivistaRoute: typeof CognitivistaRoute
   ConductistaRoute: typeof ConductistaRoute
   ConocenosRoute: typeof ConocenosRoute
   ConstructivistaRoute: typeof ConstructivistaRoute
@@ -171,11 +171,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConductistaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/cognoscitivista': {
-      id: '/cognoscitivista'
-      path: '/cognoscitivista'
-      fullPath: '/cognoscitivista'
-      preLoaderRoute: typeof CognoscitivistaRouteImport
+    '/cognitivista': {
+      id: '/cognitivista'
+      path: '/cognitivista'
+      fullPath: '/cognitivista'
+      preLoaderRoute: typeof CognitivistaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/aprendizaje-profundo': {
@@ -198,7 +198,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AprendizajeProfundoRoute: AprendizajeProfundoRoute,
-  CognoscitivistaRoute: CognoscitivistaRoute,
+  CognitivistaRoute: CognitivistaRoute,
   ConductistaRoute: ConductistaRoute,
   ConocenosRoute: ConocenosRoute,
   ConstructivistaRoute: ConstructivistaRoute,
