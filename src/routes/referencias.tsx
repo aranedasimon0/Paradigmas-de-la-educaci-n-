@@ -93,13 +93,6 @@ function Page() {
           </div>
         ))}
       </section>
-
-      <section className="mx-auto max-w-5xl px-5 lg:px-8 pb-16">
-        <p className="text-sm text-muted-foreground">
-          Nota: las referencias siguen las normas APA (7.ª ed.). Cada docente puede complementarlas
-          según el nivel y el contexto educativo en el que trabaje.
-        </p>
-      </section>
     </SiteLayout>
   );
 }
