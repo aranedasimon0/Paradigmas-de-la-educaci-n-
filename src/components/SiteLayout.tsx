@@ -80,7 +80,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <footer className="mt-20 border-t border-border bg-secondary/40">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 py-10 grid gap-8 md:grid-cols-3 text-sm">
           <div className="flex items-start gap-3">
-            <div className="bg-[var(--logo-bg)] rounded-lg p-1.5">
+            <div className="bg-[var(--logo-bg)] rounded-lg p-1">
               <img src={logoUrl} alt="UC Temuco" className="h-14 w-auto" />
             </div>
             <div>
