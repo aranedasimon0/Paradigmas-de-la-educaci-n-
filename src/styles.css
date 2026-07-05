@@ -58,6 +58,9 @@
   --cognitivista: oklch(0.5 0.13 265);  /* indigo */
   --constructivista: oklch(0.55 0.14 155); /* forest */
   --profundo: oklch(0.55 0.15 320);        /* plum */
+
+  /* UC Temuco logo dark background so white text variant stays legible */
+  --logo-bg: oklch(0.25 0.07 255);
 }
 
 @layer base {
