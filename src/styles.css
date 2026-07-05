@@ -73,7 +73,3 @@
   }
   h1, h2, h3, h4 { font-family: var(--font-serif); letter-spacing: -0.02em; }
 }
-
-@utility logo-bg {
-  background-color: var(--logo-bg);
-}
