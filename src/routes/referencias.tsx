@@ -92,6 +92,7 @@ function Page() {
             </ul>
           </div>
         ))}
+      </section>
     </SiteLayout>
   );
 }
