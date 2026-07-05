@@ -23,7 +23,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-40 backdrop-blur bg-background/85 border-b border-border">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 h-20 flex items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-4 group">
-            <img src={logoUrl} alt="Universidad Católica de Temuco" className="h-16 md:h-20 w-auto" />
+            <div className="logo-bg rounded-lg p-1.5">
+              <img src={logoUrl} alt="Universidad Católica de Temuco" className="h-16 md:h-20 w-auto" />
+            </div>
             <span className="hidden sm:flex flex-col leading-tight">
               <span className="font-serif text-[17px] font-semibold">Educar con Teorías</span>
               <span className="text-[11px] text-muted-foreground tracking-wide uppercase">UC Temuco · Pedagogía</span>
